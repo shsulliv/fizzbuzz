@@ -1,0 +1,17 @@
+{
+  "name": "fizzbuzz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava -w"
+  },
+  "author": "Shannon Sullivan",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.13.0",
+    "tap-nyan": "0.0.2",
+    "tap-spec": "^4.1.1",
+    "tap-summary": "^1.2.0"
+  }
+}
