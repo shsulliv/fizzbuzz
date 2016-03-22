@@ -1,22 +1,16 @@
-function fizzBuzz(n) {
-  var threes = 'fizz';
-  var fives = 'buzz';
-  var sevens = 'curls';
-  var myString = '';
+function fizzBuzz(number) {
+  var rules = [
+    { matcher: (x) => x % 3 === 0, word: 'fizz'},
+    { matcher: (x) => x % 5 === 0, word: 'buzz'},
+    { matcher: (x) => x % 7 === 0, word: 'curls'}
+  ];
 
-  if (n % 3 === 0) {
-    myString += threes;
-  }
+  var word = rules
+              .filter(rule => rule.matcher(number))
+              .map(rule => rule.word)
+              .join('');
 
-  if (n % 5 === 0) {
-    myString += fives;
-  }
-
-  if (n % 7 === 0) {
-    myString += sevens;
-  }
-
-  return myString || n;
+  return word || number;
 }
 
 module.exports = fizzBuzz;
